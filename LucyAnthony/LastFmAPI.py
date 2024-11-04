@@ -1,6 +1,6 @@
 import requests
 
-api_key = '6275d1d7adc70d522d2bdd63eb5c8f6e'
+api_key = ''
 username = 'lucyanthony243'
 url = f"http://ws.audioscrobbler.com/2.0/?method=user.getTopAlbums&user={username}&api_key={api_key}&format=json"
 
