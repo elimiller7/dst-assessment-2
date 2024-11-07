@@ -3,7 +3,7 @@ import random
 
 def album_pref(username):
 
-    api_key = 'd2894cf098acfccf25966cc6e19a247e'
+    api_key = ''
     url = f"http://ws.audioscrobbler.com/2.0/?method=user.getTopAlbums&user={username}&api_key={api_key}&format=json"
 
     response = requests.get(url)
