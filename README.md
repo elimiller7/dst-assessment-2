@@ -1,5 +1,13 @@
 # Data Science Toolbox Assessed Coursework 2: Data at Scale
-
+## Plan
+- EDA / Intro
+- Data: Split data into train, test, (validate) data --> leave some points for each user out?
+- Question: Can we predict if a user will like a left out artist (to test model) / recommend further artists?
+- Collaborative Filtering
+- Content-based Filtering
+- Auto-encoders
+- Graph-based methods
+- Conclusion
 
 ## Project Group
 
