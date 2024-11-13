@@ -28,5 +28,5 @@ artists_df.show(3)
 tags_df.show(3)
 user_taggedartists_df.show(3)
 user_friends_df.show(3)
-user_taggedartists_timestamps_df(3)
+user_taggedartists_timestamps_df.show(3)
 
