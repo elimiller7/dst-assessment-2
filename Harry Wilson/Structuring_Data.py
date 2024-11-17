@@ -36,7 +36,7 @@ artist_tags_info_df.show(5)
 
 # Aggregate tags for each artist into a list
 artist_profiles_df = artist_tags_info_df.groupBy("artistID", "artist_name") \
-    .agg(F.collect_list("tag").alias("tags"))
+    .agg(F.collect_set("tag").alias("tags"))
 
 # Display artist profiles with tags list
 artist_profiles_df.show(5, truncate=False)
@@ -54,4 +54,5 @@ train_data, test_data = user_artist_profile_df.randomSplit([0.80, 0.20], seed=42
 print("Train Data Count: ", train_data.count())
 print("Test Data Count: ", test_data.count())
 
-train_data.show(5, truncate=False)
+train_data.show(20, truncate=False)
+test_data.show(20, truncate=False)
