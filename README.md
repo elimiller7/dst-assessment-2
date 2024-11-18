@@ -1,8 +1,10 @@
 # Data Science Toolbox Assessed Coursework 2: Data at Scale
 ## Plan
 - EDA / Intro
+- Q1: Can we predict if a user will like a left out artist (to test model) / recommend further artists?
+- Q2: How can different approaches to a recommender system affect the computational performance of our models?
+- (time, space, etc.)
 - Data: Split data into train, test, (validate) data --> leave some points for each user out?
-- Question: Can we predict if a user will like a left out artist (to test model) / recommend further artists?
 - Collaborative Filtering
 - Content-based Filtering
 - Auto-encoders
