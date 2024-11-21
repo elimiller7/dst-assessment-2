@@ -24,9 +24,16 @@ All report content is in the directory:
 
 * report/
 
-The report takes the following structure:
+The report takes the following structure: (suggestion)
 
-* tbd
+* 01-Introduction.ipynb
+* 02-EDA.ipynb
+* 03-Collaborative-Filtering.ipynb
+* 04-Content-Based-Filtering.ipynb
+* 05-Hybrid-Model.ipynb
+* 06-Graph-Neural-Network.ipynb
+* 07-Variational-Autoencoders.ipynb
+* 08-Conclusion.ipynb
 
 ### Requirements:
 
