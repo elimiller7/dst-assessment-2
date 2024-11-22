@@ -1,8 +1,4 @@
 import pandas as pd
-import torch
-from torch.nn import Linear, Parameter
-from torch_geometric.nn import MessagePassing
-from torch_geometric.utils import add_self_loops, degree
 
 def get_friends(userID : int, df : pd.DataFrame):
     """Returns a list containing the friends of userID in df. df needs columns 'userID', 'friendID' (usually user_friends)."""

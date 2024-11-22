@@ -413,7 +413,7 @@ class LastFM2(BasicDataset):
     """
     def __init__(self, path="../data/GNN"):
         # train or test
-        cprint("loading [last fm]")
+        cprint("loading [last fm 2]")
         self.mode_dict = {'train':0, "test":1}
         self.mode    = self.mode_dict['train']
         # self.n_users = 2100
