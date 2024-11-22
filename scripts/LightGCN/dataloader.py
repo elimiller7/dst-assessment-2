@@ -20,6 +20,8 @@ import world
 from world import cprint
 from time import time
 
+cwd = os.getcwd()
+
 class BasicDataset(Dataset):
     def __init__(self):
         print("init dataset")
@@ -411,7 +413,7 @@ class LastFM2(BasicDataset):
     Dataset type for pytorch
     LastFM dataset 2
     """
-    def __init__(self, path="../data/GNN"):
+    def __init__(self, path=os.path.join(cwd,'data','GNN')):
         # train or test
         cprint("loading [last fm 2]")
         self.mode_dict = {'train':0, "test":1}
@@ -536,8 +538,6 @@ class LastFM2(BasicDataset):
             negItems.append(self.allNeg[user])
         return negItems
             
-    
-    
     def __getitem__(self, index):
         user = self.trainUniqueUsers[index]
         # return user_id and the positive items of the user
