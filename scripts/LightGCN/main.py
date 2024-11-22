@@ -13,12 +13,13 @@ print(">>SEED:", world.seed)
 # ==============================
 import register
 from register import dataset
-import importlib
 
+# SH8 - Forced reload of scripts since Kernel does not automatically detect import changes. This allows us to run the model multiple times without restarting Kernel.
+import importlib
 for module in [world,utils,Procedure,register]:
     importlib.reload(module)
 
-start2 = time.time()
+start2 = time.time() # SH8 - added timing capabilities
 
 Recmodel = register.MODELS[world.model_name](world.config, dataset)
 Recmodel = Recmodel.to(world.device)
@@ -56,5 +57,6 @@ finally:
     if world.tensorboard:
         w.close()
 
+# SH8 - added timing capabilities
 end2 = time.time()
 print(f'Total time taken: {end2-start2}')

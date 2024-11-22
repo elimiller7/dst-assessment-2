@@ -408,6 +408,7 @@ class Loader(BasicDataset):
     #         negItems.append(self.allNeg[user])
     #     return negItems
 
+# SH8 - added LastFM2 class
 class LastFM2(BasicDataset):
     """
     Dataset type for pytorch

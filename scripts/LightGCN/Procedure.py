@@ -152,6 +152,7 @@ def Test(dataset, Recmodel, epoch, w=None, multicore=0):
         if multicore == 1:
             pool.close()
         print(results)
+        # SH8 - added code to save results to a csv file
         results2 = {'epoch':epoch}
         results2.update(results)
         filepath = os.path.join('..','scripts','LightGCN','results','results.csv')

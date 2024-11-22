@@ -8,6 +8,7 @@ if world.dataset in ['gowalla', 'yelp2018', 'amazon-book']:
     dataset = dataloader.Loader(path="../data/"+world.dataset)
 elif world.dataset == 'lastfm':
     dataset = dataloader.LastFM()
+# SH8 - registered LastFM2 dataset
 elif world.dataset == 'lastfm2':
     dataset = dataloader.LastFM2()
 
