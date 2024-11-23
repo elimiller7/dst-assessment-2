@@ -21,6 +21,8 @@ from sklearn.metrics import roc_auc_score
 import pandas as pd
 import os
 
+from parse import parse_args
+args = parse_args()
 
 CORES = multiprocessing.cpu_count() // 2
 
@@ -152,9 +154,13 @@ def Test(dataset, Recmodel, epoch, w=None, multicore=0):
         if multicore == 1:
             pool.close()
         print(results)
+
         # SH8 - added code to save results to a csv file
+        filename = f'results_l{args.layer}_rd{args.recdim}_lr{args.lr}.csv'
         results2 = {'epoch':epoch}
         results2.update(results)
-        filepath = os.path.join('..','scripts','LightGCN','results','results.csv')
+        filepath = os.path.join('..','scripts','LightGCN','results',filename)
         pd.DataFrame(results2).to_csv(os.path.join(filepath),mode='a',header=False,index=False)
+        # SH8 - end added code to save results to a csv file
+
         return results

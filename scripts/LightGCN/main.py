@@ -13,10 +13,11 @@ print(">>SEED:", world.seed)
 # ==============================
 import register
 from register import dataset
+import dataloader
 
 # SH8 - Forced reload of scripts since Kernel does not automatically detect import changes. This allows us to run the model multiple times without restarting Kernel.
 import importlib
-for module in [world,utils,Procedure,register]:
+for module in [world,utils,Procedure,register,dataloader]:
     importlib.reload(module)
 
 start2 = time.time() # SH8 - added timing capabilities
@@ -45,13 +46,15 @@ else:
     world.cprint("not enable tensorflowboard")
 
 try:
-    for epoch in range(world.TRAIN_epochs+1):
+    for epoch in range(world.TRAIN_epochs+1): # SH8 - minor alteration to make sure results are saved for final epoch
         start = time.time()
         if epoch %10 == 0:
             cprint("[TEST]")
             Procedure.Test(dataset, Recmodel, epoch, w, world.config['multicore'])
         output_information = Procedure.BPR_train_original(dataset, Recmodel, bpr, epoch, neg_k=Neg_k,w=w)
-        print(f'EPOCH[{epoch+1}/{world.TRAIN_epochs}] {output_information}')
+        # SH8 - make sure final epoch isn't printed since otherwise we get e.g. epoch 11/10
+        if epoch+1 != world.TRAIN_epochs+1:
+            print(f'EPOCH[{epoch+1}/{world.TRAIN_epochs}] {output_information}')
         torch.save(Recmodel.state_dict(), weight_file)
 finally:
     if world.tensorboard:

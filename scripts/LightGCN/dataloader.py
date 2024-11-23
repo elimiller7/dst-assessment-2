@@ -414,7 +414,7 @@ class LastFM2(BasicDataset):
     Dataset type for pytorch
     LastFM dataset 2
     """
-    def __init__(self, path=os.path.join(cwd,'data','GNN')):
+    def __init__(self, path=os.path.join('..','data','GNN')):
         # train or test
         cprint("loading [last fm 2]")
         self.mode_dict = {'train':0, "test":1}
@@ -422,11 +422,11 @@ class LastFM2(BasicDataset):
         # self.n_users = 2100
         # self.m_items = 18745
         trainData = pd.read_table(join(path, 'user_artists_train.txt'), header=None)
-        print(trainData.head())
+        #print(trainData.head())
         testData  = pd.read_table(join(path, 'user_artists_test.txt'), header=None)
-        print(testData.head())
+        #print(testData.head())
         trustNet  = pd.read_table(join(path, 'user_friends.txt'), header=None).to_numpy()
-        print(trustNet[:5])
+        #print(trustNet[:5])
         trustNet -= 1
         trainData-= 1
         testData -= 1
