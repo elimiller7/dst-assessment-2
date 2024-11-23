@@ -44,4 +44,5 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=2020, help='random seed')
     parser.add_argument('--model', type=str, default='lgn', help='rec-model, support [mf, lgn]')
     parser.add_argument('--device', type=str, default='GPU', help='device to use, CPU or GPU') #SH8 - added capability to accept device type as argument when running script.
+    parser.add_argument('--verbose', type=str, default='True', help='controls certain print commands, reducing the console bloat') #SH8 - added verbose argument to reduce console bloat. Wouldnt work as bool for some reason so using string instead.
     return parser.parse_args()
