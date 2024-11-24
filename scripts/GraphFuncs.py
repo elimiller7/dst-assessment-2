@@ -22,6 +22,14 @@ def get_df_name(df : pd.DataFrame, globals : dict): # From https://stackoverflow
     name =[x for x in globals if globals[x] is df][0]
     return name
 
+def get_artist_name(artistID : int, df : pd.DataFrame):
+    """Returns the artist name given the ID."""
+    name_row = df[df['id'] == artistID]
+    if not name_row.empty:
+        return name_row.iloc[0]['name']
+    else:
+        return None
+
 def plot_spring_graph(vertices_pd : pd.DataFrame, edges_pd : pd.DataFrame, fig_size = (12,8)):
     """Plots a graph using the spring_layout using two input DataFrames, one with the vertices, and one with the edges.
     vertices_pd, needs columns 'id' and 'partition', edges_pd needs columns 'src', 'dst', and 'relationship'."""

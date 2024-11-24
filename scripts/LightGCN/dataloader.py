@@ -460,11 +460,11 @@ class LastFM2(BasicDataset):
 
     @property
     def n_users(self):
-        return 2100
+        return 2101
     
     @property
     def m_items(self):
-        return 18745
+        return 18746
     
     @property
     def trainDataSize(self):
