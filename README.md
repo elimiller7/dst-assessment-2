@@ -45,7 +45,7 @@ Requirements are given in the respective Python notebooks or R Markdown files.
 
 Our working is shown in our own directories:
 
-* LucyAnthony/
+* LucyA/
 * SheridanH/
 * EliM/
-* Harry Wilson/
+* HarryW/
