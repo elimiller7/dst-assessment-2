@@ -1,24 +1,13 @@
 # Data Science Toolbox Assessed Coursework 2: Data at Scale
 
-## Plan
-- EDA / Intro
-- Q1: Can we predict if a user will like a left out artist (to test model) / recommend further artists?
-- Q2: How can different approaches to a recommender system affect the computational performance of our models?
-- (time, space, etc.)
-- Data: Split data into train, test, (validate) data --> leave some points for each user out?
-- Collaborative Filtering
-- Content-based Filtering
-- Auto-encoders
-- Graph-based methods
-- Conclusion
-- Put requirements in each .ipynb
-
 ## Project Group
 
 - Lucy Anthony (ou21413)
 - Sheridan Heywood (ym21803)
 - Eli Miller (fp21952)
 - Harry Wilson (km21200)
+
+The equity split is equal among all 4 members.
 
 ## Reading order and requirements
 
@@ -32,10 +21,9 @@ The report takes the following structure: (suggestion)
 * 02-EDA.ipynb
 * 03-Collaborative-Filtering.ipynb
 * 04-Content-Based-Filtering.ipynb
-* 05-Hybrid-Model.ipynb
-* 06-Graph-Neural-Network.ipynb
-* 07-Variational-Autoencoders.ipynb
-* 08-Conclusion.ipynb
+* 05-Graph-Neural-Network.ipynb
+* 06-Variational-Autoencoders.ipynb
+* 07-Conclusion.ipynb
 
 ### Requirements:
 
@@ -49,3 +37,5 @@ Our working is shown in our own directories:
 * SheridanH/
 * EliM/
 * HarryW/
+
+User Jam847 is another account of SHeywood8 which was used to commit by accident.
