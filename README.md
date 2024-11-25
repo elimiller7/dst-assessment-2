@@ -1,4 +1,5 @@
 # Data Science Toolbox Assessed Coursework 2: Data at Scale
+
 ## Plan
 - EDA / Intro
 - Q1: Can we predict if a user will like a left out artist (to test model) / recommend further artists?
@@ -10,6 +11,7 @@
 - Auto-encoders
 - Graph-based methods
 - Conclusion
+- Put requirements in each .ipynb
 
 ## Project Group
 

@@ -47,6 +47,7 @@ config['pretrain'] = args.pretrain
 config['A_split'] = False
 config['bigdata'] = False
 
+# SH8 - added ability to choose device as a parameter when running the script. args comes from parse.py
 GPU = torch.cuda.is_available()
 devicearg = args.device
 if devicearg == 'GPU' and not GPU:

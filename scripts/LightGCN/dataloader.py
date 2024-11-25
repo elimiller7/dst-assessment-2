@@ -20,6 +20,8 @@ import world
 from world import cprint
 from time import time
 
+cwd = os.getcwd()
+
 class BasicDataset(Dataset):
     def __init__(self):
         print("init dataset")
@@ -406,24 +408,25 @@ class Loader(BasicDataset):
     #         negItems.append(self.allNeg[user])
     #     return negItems
 
+# SH8 - added LastFM2 class
 class LastFM2(BasicDataset):
     """
     Dataset type for pytorch
     LastFM dataset 2
     """
-    def __init__(self, path="../data/GNN"):
+    def __init__(self, path=os.path.join('..','data','GNN')):
         # train or test
-        cprint("loading [last fm]")
+        cprint("loading [last fm 2]")
         self.mode_dict = {'train':0, "test":1}
         self.mode    = self.mode_dict['train']
         # self.n_users = 2100
         # self.m_items = 18745
         trainData = pd.read_table(join(path, 'user_artists_train.txt'), header=None)
-        print(trainData.head())
+        #print(trainData.head())
         testData  = pd.read_table(join(path, 'user_artists_test.txt'), header=None)
-        print(testData.head())
+        #print(testData.head())
         trustNet  = pd.read_table(join(path, 'user_friends.txt'), header=None).to_numpy()
-        print(trustNet[:5])
+        #print(trustNet[:5])
         trustNet -= 1
         trainData-= 1
         testData -= 1
@@ -457,11 +460,11 @@ class LastFM2(BasicDataset):
 
     @property
     def n_users(self):
-        return 2100
+        return 2101
     
     @property
     def m_items(self):
-        return 18745
+        return 18746
     
     @property
     def trainDataSize(self):
@@ -536,8 +539,6 @@ class LastFM2(BasicDataset):
             negItems.append(self.allNeg[user])
         return negItems
             
-    
-    
     def __getitem__(self, index):
         user = self.trainUniqueUsers[index]
         # return user_id and the positive items of the user
