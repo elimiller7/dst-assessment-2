@@ -15,7 +15,7 @@ All report content is in the directory:
 
 * report/
 
-The report takes the following structure: (suggestion)
+The report takes the following structure:
 
 * 01-Introduction.ipynb
 * 02-EDA.ipynb
@@ -27,7 +27,7 @@ The report takes the following structure: (suggestion)
 
 ### Requirements:
 
-Requirements are given in the respective Python notebooks or R Markdown files.
+Requirements are given in the respective Python notebooks, with automatic installs available. PyTorch may have to be installed manually.
 
 ## Evidence
 
